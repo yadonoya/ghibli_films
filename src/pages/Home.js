@@ -26,9 +26,6 @@ function Home() {
         fetchFilmData();
     },[])
 
-    console.log(films);
-    console.log(people);
-
     return (
         <div>
             <Header />
