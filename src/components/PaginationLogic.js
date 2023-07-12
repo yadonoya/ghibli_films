@@ -11,7 +11,7 @@ function PaginationLogic({ filmsPerPage, totalFilms, paginate }) {
 
   return (
     <Stack spacing={2}>
-        <Pagination onChange={(event, page) => paginate(page)} count={3} variant="outlined">
+        <Pagination onChange={(event, page) => paginate(page)} count={pageNumbers.length} variant="outlined">
             <ul>
                 {pageNumbers.map(num => (
                     <li key={num}>

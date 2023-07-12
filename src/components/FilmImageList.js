@@ -1,8 +1,9 @@
 import FilmImageShow from "./FilmImageShow";
 
-import './FilmImageList.css';
+import '../styles/FilmImageList.css';
 
-function FilmImageList({ films, term }) {
+function FilmImageList({ films }) {
+
     const displayFilms = films.map((film) => {
         return <FilmImageShow  key={film.id} film={film} />
     })

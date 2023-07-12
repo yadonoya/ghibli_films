@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import './FilmImageSearchBar.css';
+import '../styles/FilmImageSearchBar.css';
 
 function FilmSearchBar({ onSubmit }) {
     const [term, setTerm] = useState('');

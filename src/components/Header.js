@@ -2,7 +2,7 @@ import header_image from '../images/ghibli_logo.png';
 import { Link } from "react-router-dom";
 
 
-import './Header.css';
+import '../styles/Header.css';
 
 function Header() {
     return <div className='header-image-container'>

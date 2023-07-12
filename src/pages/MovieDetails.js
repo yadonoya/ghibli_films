@@ -1,14 +1,12 @@
 import { useParams, useOutletContext } from "react-router-dom";
 
-import '../components/MovieDetails.css';
+import '../styles/MovieDetails.css';
 
 function MovieDetails() {
     const { id } = useParams();
     const [films] = useOutletContext();
 
     const matchedFilm = films.find(film => film.id === id);
-
-    console.log(matchedFilm);
 
     return (
         <div className="movie-details">

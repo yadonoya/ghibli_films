@@ -12,6 +12,7 @@ const filmsURL = 'https://ghibliapi.vercel.app/films';
 
 function Home() {
     const [films, setFilms] = useState([]);
+    const [filteredFilms, setFilteredFilms] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [filmsPerPage] = useState(10);
 
@@ -19,7 +20,9 @@ function Home() {
     const { id } = useParams();
 
     const handleSubmit = (term) => {
-        console.log('Search Ghibli films for the film: ', term);
+        const normalizedTerm = term.toLowerCase();
+        const filteredFilmArray = films.filter(film => film.title.toLowerCase().includes(normalizedTerm))
+        setFilteredFilms(filteredFilmArray);
     }
 
     useEffect(() => {
@@ -30,10 +33,14 @@ function Home() {
         fetchFilmData();
     },[])
 
+    // Film Source toggle for pagination and filtering
+    const filmSource = filteredFilms.length ? filteredFilms : films;
+
+
     // Get current films
     const indexOfLastFilm = currentPage * filmsPerPage;
     const indexOfFirstFilm = indexOfLastFilm - filmsPerPage;
-    const currentFilms = films.slice(indexOfFirstFilm, indexOfLastFilm);
+    const currentFilms = filmSource.slice(indexOfFirstFilm, indexOfLastFilm);
 
     //Change Page
     const paginate = (pageNumber) => {
@@ -45,8 +52,8 @@ function Home() {
         <div>
             <Header />
                 {!id&&<FilmSearchBar onSubmit={handleSubmit}/>}
-                {!id&&<FilmImageList films={currentFilms} />}
-                <PaginationLogic filmsPerPage={filmsPerPage} totalPosts={films.length} paginate={paginate} />
+                {!id&&<FilmImageList films={currentFilms} filteredFilms={filteredFilms} />}
+                {!id&&<PaginationLogic filmsPerPage={filmsPerPage} totalFilms={filmSource.length} paginate={paginate} />}
             <Outlet context={[films, setFilms]}/>
         </div>
     )
