@@ -1,6 +1,6 @@
 .film-image-list {
-    columns: 5 200px;
-    column-gap: 10px;
+    columns: 5 180px;
+    column-gap: 8px;
 }
 
 img {

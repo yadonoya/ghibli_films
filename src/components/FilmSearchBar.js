@@ -16,7 +16,7 @@ function FilmSearchBar({ onSubmit }) {
     }
 
     return (
-        <div className='film-image-search-bar'>
+        <div className='film-search-bar'>
             <form onSubmit={handleFormSubmit}>
                 <input value={term} onChange={handleChange} placeholder='Enter Ghibli film to search for...'/>
             </form>

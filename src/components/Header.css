@@ -1,0 +1,8 @@
+.header-image {
+    display: flex;
+    justify-content: center;
+}
+
+.header-image img {
+    width: 60%;
+}

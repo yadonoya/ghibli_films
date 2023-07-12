@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+import Header from './components/Header';
 import FilmImageList from './components/FilmImageList';
 import FilmSearchBar from './components/FilmSearchBar';
 
@@ -27,6 +28,7 @@ function App() {
     console.log(films); 
     return (
         <div>
+            <Header />
             <FilmSearchBar onSubmit={handleSubmit}/>
             <FilmImageList films={films} />
         </div>
