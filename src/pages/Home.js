@@ -8,7 +8,7 @@ import PaginationLogic from '../components/PaginationLogic';
 
 import axios from 'axios';
 
-const filmsURL = 'https://ghibliapi.vercel.app/films';
+const filmsURL = 'https://ghibli.rest/films';
 
 function Home() {
     const [films, setFilms] = useState([]);
