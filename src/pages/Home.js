@@ -11,7 +11,6 @@ const filmsURL = 'https://ghibliapi.vercel.app/films';
 
 function Home() {
     const [films, setFilms] = useState([]);
-    const [people, setPeople] = useState([]);
 
     const { id } = useParams();
 
@@ -23,7 +22,6 @@ function Home() {
         async function fetchFilmData() {
             const request = await axios.get(filmsURL);
             setFilms(request.data);
-            setPeople(request.data.people);
         }
         fetchFilmData();
     },[])
