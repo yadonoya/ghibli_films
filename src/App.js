@@ -1,5 +1,9 @@
+import FilmSearchBar from "./components/FilmSearchBar";
+
 function App() {
-    return <div>App</div>
+    return (
+        <FilmSearchBar />
+    )
 }
 
 export default App;

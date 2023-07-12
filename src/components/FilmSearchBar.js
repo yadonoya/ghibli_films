@@ -1,5 +1,17 @@
 function FilmSearchBar() {
-    return <div>FilmSearchBar</div>
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+
+
+    }
+
+    return (
+        <div>
+            <form onSubmit={handleFormSubmit}>
+                <input />
+            </form>
+        </div>
+    )
 }
 
 export default FilmSearchBar;
