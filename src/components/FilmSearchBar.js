@@ -9,6 +9,8 @@ function FilmSearchBar({ onSubmit }) {
         event.preventDefault();
 
         onSubmit(term);
+
+        setTerm('');
     }
 
     const handleChange = (event) => {
