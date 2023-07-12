@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import './FilmImageSearchBar.css';
+
 function FilmSearchBar({ onSubmit }) {
     const [term, setTerm] = useState('');
 
@@ -14,9 +16,9 @@ function FilmSearchBar({ onSubmit }) {
     }
 
     return (
-        <div>
+        <div className='film-image-search-bar'>
             <form onSubmit={handleFormSubmit}>
-                <input value={term} onChange={handleChange} />
+                <input value={term} onChange={handleChange} placeholder='Enter Ghibli film to search for...'/>
             </form>
         </div>
     )

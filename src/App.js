@@ -24,6 +24,7 @@ function App() {
         fetchFilmData();
     },[])
 
+    console.log(films); 
     return (
         <div>
             <FilmSearchBar onSubmit={handleSubmit}/>
