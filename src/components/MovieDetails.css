@@ -1,0 +1,47 @@
+.movie-details {
+    background: white;
+    color: white;
+  }
+  
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 0 5rem 0;
+  }
+  
+  .film-image-header {
+    width: 40vw;
+  }
+  
+  .film-image {
+    max-width: 100%;
+    margin-bottom: 1.3rem;
+  }
+  
+  
+  .info-container div {
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+  }
+  
+  .movie-info {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .movie-info:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .movie-info p {
+    margin: 0.3rem 1rem 0.3rem 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .description {
+    width: 50vw;
+    text-align: justify;
+    margin-top: 35px;
+  }

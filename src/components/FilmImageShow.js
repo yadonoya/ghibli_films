@@ -25,7 +25,7 @@ function FilmImageShow({ film }) {
                                 Year: {film.release_date}  
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Minutes: {film.running_time}  
+                                Runtime: {film.running_time} minutes
                             </Typography>
                         </CardContent>
                 </CardActionArea>
@@ -35,11 +35,3 @@ function FilmImageShow({ film }) {
 }
 
 export default FilmImageShow;
-
-/*
-{film.title}
-{film.release_date}
-<Link to={film.id}>
-    <img src={film.image} alt={film.title}/>
-</Link>
-*/
