@@ -25,7 +25,6 @@ function App() {
         fetchFilmData();
     },[])
 
-    console.log(films); 
     return (
         <div>
             <Header />
