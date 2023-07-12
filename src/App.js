@@ -32,7 +32,6 @@ function App() {
             <FilmSearchBar onSubmit={handleSubmit}/>
             <FilmImageList films={films} />
         </div>
-
     )
 }
 
