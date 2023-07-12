@@ -1,5 +1,7 @@
-function FilmImageShow() {
-    return <div>FilmImageShow</div>
+function FilmImageShow({ film }) {
+    return <div>
+        {film.title}
+    </div>
 }
 
 export default FilmImageShow;
